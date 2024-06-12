@@ -1,0 +1,49 @@
+menu "CMSIS-NN submodule config"
+
+menuconfig PKG_USING_CMSIS_NN
+    bool "Enable CMSIS-NN pacakge"
+    default n
+
+if PKG_USING_CMSIS_NN
+    config CMSIS_NN_ACTIVATION
+        bool "Activation functions"
+        default y
+
+    config CMSIS_NN_BASICMATHSNN
+        bool "Basic math functions"
+        default y
+
+    config CMSIS_NN_CONCATENATION
+        bool "Concatenation functions"
+        default y
+
+    config CMSIS_NN_CONVOLUTION
+        bool "Convolution functions"
+        default y
+
+    config CMSIS_NN_FULLYCONNECTED
+        bool "Fully connection functions"
+        default y
+
+    config CMSIS_NN_LSTM
+        bool "LSTM functions"
+        default y
+
+    config CMSIS_NN_POOLING
+        bool "Pooling functions"
+        default y
+
+    config CMSIS_NN_RESHAPE
+        bool "Reshape functions"
+        default y
+
+    config CMSIS_NN_SOFTMAX
+        bool "Softmax functions"
+        default y
+
+    config CMSIS_NN_SVDF
+        bool "SVDF functions"
+        default y
+endif
+
+endmenu
